@@ -1,0 +1,4 @@
+Fastapi
+sqlalchemy
+requests
+uvicorn
