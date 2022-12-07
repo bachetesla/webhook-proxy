@@ -13,9 +13,8 @@ def ping():
 def trigger(in_message: InMessage):
     mod = __import__(f'src.lib.{in_message.type.lower()}', fromlist=[in_message.type])
     klass = getattr(mod, in_message.type)
-    print(klass(
-        token=in_message.token,
+    klass(
         chatId=in_message.chatId
     ).send(
         in_message.msg
-    ))
+    )

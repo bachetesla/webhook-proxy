@@ -6,4 +6,4 @@ class InMessage(BaseModel):
     msg: str
     type: Clients
     chatId: str
-    token: str
+    # token: str  #Handled by env, but if you want to get from request uncomment

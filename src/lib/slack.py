@@ -15,7 +15,7 @@ class Slack(ClientBase):
         }
 
         try:
-            response = requests.post(api_url, json={'channel': self.chatId, 'text': f"{msg} {self.__str__()}"}, headers=headers)
+            response = requests.post(api_url, json={'channel': self.chatId, 'text': f"{msg}"}, headers=headers)
             if response.status_code != 200 or not response.json()['ok']:
                 raise ClientError(response.text)
         except Exception as e:

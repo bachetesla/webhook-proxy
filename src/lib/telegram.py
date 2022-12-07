@@ -13,7 +13,7 @@ class Telegram(ClientBase):
         api_url = f'https://api.telegram.org/bot{self.token}/sendMessage'
 
         try:
-            response = requests.post(api_url, json={'chat_id': self.chatId, 'text': f"{msg} {self.__str__()}"})
+            response = requests.post(api_url, json={'chat_id': self.chatId, 'text': f"{msg}"})
             print(response.text)
         except Exception as e:
             raise ClientError(e)
