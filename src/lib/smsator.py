@@ -16,7 +16,6 @@ class Smsator(ClientBase):
         try:
             response = requests.post(api_url, headers=headers, json={
             })
-            print(response.json())
             if response.status_code != 200:
                 raise ClientError(response.text)
         except Exception as e:
