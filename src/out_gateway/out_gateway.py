@@ -14,7 +14,7 @@ def trigger(in_message: InMessage):
     mod = __import__(f'src.lib.{in_message.type.lower()}', fromlist=[in_message.type])
     klass = getattr(mod, in_message.type)
     klass(
-        chatId=in_message.chatId
+        to=in_message.to
     ).send(
         in_message.msg
     )

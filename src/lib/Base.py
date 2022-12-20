@@ -20,13 +20,13 @@ class ClientBase:
         if self.token is None or not self.token or self.token == "":
             raise ClientError("Can't find Token")
 
-    def __init__(self, chatId, token = None):
+    def __init__(self, to, token=None):
         """
         Initial the object
         :param token:
-        :param chatId:
+        :param to:
         """
-        self.chatId = chatId
+        self.to = to
         if token:
             self.token = token
         else:

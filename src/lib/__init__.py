@@ -6,3 +6,4 @@ class Clients(str, Enum):
     TELEGRAM = "Telegram"
     SLACK = "Slack"
     MSTEAMS = "Msteams"
+    SMSATOR = "Smsator"
