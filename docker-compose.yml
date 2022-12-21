@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  webhook_proxy:
+    #image: docker.snpx.dev/webhook_proxy:0.0.1
+    build:
+      context: .
+      dockerfile: _prod/Dockerfile
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - MSTEAMS_TOKEN=${MSTEAMS_TOKEN}
+      - SLACK_TOKEN=${SLACK_TOKEN}
+      - SMASATOR_TOKEN=${SMASATOR_TOKEN}
